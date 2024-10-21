@@ -1,0 +1,127 @@
+Desarrollo de un Juego Multimodal con HTML, CSS y JavaScript
+Estructura General
+1. Interfaz de Usuario (UI)
+Pantalla de Inicio: Registro/login de usuarios, explicación del juego, reglas y recompensas.
+Lobby: Donde los jugadores esperan a que se unan los otros 3 jugadores. Mostrar información como tiempo de espera y cantidad de jugadores actuales.
+Pantalla de Juego: Cambia según el tipo de juego seleccionado.
+Pantalla de Resultados: Muestra los resultados del juego y las recompensas distribuidas.
+2. Tipos de Juegos
+Preguntas de Trivia:
+
+Preguntas de opción múltiple.
+Preguntas de verdadero/falso.
+Suscripción Básica: $5 por partida.
+Suscripción Premium: $10 por partida, incluye 1 pista adicional.
+Suscripción VIP: $20 por partida, incluye 2 pistas adicionales.
+Sopa de Letras:
+
+Los jugadores deben encontrar palabras en una cuadrícula de letras.
+Suscripción Básica: $5 por partida.
+Suscripción Premium: $10 por partida, incluye 1 pista de palabras.
+Suscripción VIP: $20 por partida, incluye 2 pistas de palabras.
+Adivinar la Canción:
+
+Se reproduce un fragmento de una canción y los jugadores deben adivinar el título o el artista.
+Suscripción Básica: $5 por partida.
+Suscripción Premium: $10 por partida, incluye 1 pista de letra.
+Suscripción VIP: $20 por partida, incluye 2 pistas de letra.
+Adivinar la Imagen:
+
+Mostrar una imagen pixelada o una parte de la imagen y los jugadores deben adivinar qué es.
+Mostrar 4 imágenes y una lista de opciones de respuesta para adivinar la capital o el país.
+Suscripción Básica: $5 por partida.
+Suscripción Premium: $10 por partida, incluye 1 pista de imagen adicional.
+Suscripción VIP: $20 por partida, incluye 2 pistas de imagen adicionales.
+Completar la Canción:
+
+Mostrar una línea de una canción con una palabra faltante que los jugadores deben completar.
+Suscripción Básica: $5 por partida.
+Suscripción Premium: $10 por partida, incluye 1 pista de palabra.
+Suscripción VIP: $20 por partida, incluye 2 pistas de palabra.
+Completar una Palabra:
+
+Mostrar una palabra incompleta y los jugadores deben llenar los espacios en blanco.
+Suscripción Básica: $5 por partida.
+Suscripción Premium: $10 por partida, incluye 1 pista de letra.
+Suscripción VIP: $20 por partida, incluye 2 pistas de letra.
+Estructura de Inversión y Recompensas
+Cada partida tiene un costo de entrada según el nivel de suscripción, y puedes ofrecer tres niveles de suscripción con beneficios adicionales. A continuación se muestra un ejemplo de cómo se podrían distribuir las ganancias:
+
+Distribución de Ganancias
+Comisión: Supongamos que tomas una comisión del 20% del total de la entrada.
+Premios: El 80% restante se distribuye entre los jugadores.
+Ejemplo de Cálculo
+Número de Jugadores: 4
+
+Costo de Entrada:
+
+Suscripción Básica: $5 por jugador
+Suscripción Premium: $10 por jugador
+Suscripción VIP: $20 por jugador
+Distribución de suscripciones:
+
+1 jugador con suscripción básica.
+2 jugadores con suscripción premium.
+1 jugador con suscripción VIP.
+Total Recaudado: $5 + ($10 * 2) + $20 = $45
+
+Comisión (20%): $45 * 0.20 = $9
+
+Premios (80%): $45 * 0.80 = $36
+
+Distribución de Premios
+Primer Lugar (50%): $36 * 0.50 = $18
+Segundo Lugar (30%): $36 * 0.30 = $10.8
+Tercer Lugar (15%): $36 * 0.15 = $5.4
+Cuarto Lugar (5%): $36 * 0.05 = $1.8
+
+Modalidades para "Venezolanismo"
+Preguntas de Cultura General
+
+Preguntas de Selección Múltiple: Preguntas sobre la historia, geografía, y cultura venezolana.
+Verdadero o Falso: Declaraciones sobre hechos venezolanos que los jugadores deben identificar como verdaderos o falsos.
+Sopa de Letras
+
+Palabras Venezolanas: Nombres de lugares, personajes históricos, comidas típicas, etc.
+Adivinar la Canción
+
+Música Venezolana: Reproducción de fragmentos de canciones tradicionales y modernas de Venezuela.
+Adivinar una Imagen
+
+Imágenes de Venezuela: Mostrar imágenes de paisajes, monumentos, y símbolos venezolanos. Añadir opciones de respuesta para adivinar la capital o el país.
+Completar una Canción Cantándola
+
+Letras de Canciones Venezolanas: Completar las letras de canciones populares de Venezuela.
+Completar una Palabra
+
+Palabras Venezolanas: Completar palabras relacionadas con la cultura y el idioma venezolano.
+
+
+
+Frontend
+HTML: Estructura básica de la página.
+CSS: Estilos y diseño visual.
+JavaScript: Lógica del juego, manejo de eventos y dinámicas del frontend.
+
+Backend
+Node.js: Plataforma para ejecutar JavaScript en el servidor.
+Express.js: Framework de Node.js para crear APIs y manejar rutas.
+Bases de Datos:
+MySQL: Alternativas SQL para bases de datos relacionales.
+Autenticación y Seguridad:
+Passport.js o JWT (JSON Web Tokens): Para manejar la autenticación de usuarios.
+API de Pagos:
+Stripe o PayPal: Para manejar pagos y transacciones de dinero.
+Manejo de Inversión de los Jugadores y Retiros de Dinero
+1. Registro y Autenticación de Usuarios
+Registro: Los usuarios se registran proporcionando detalles como nombre, email y contraseña.
+Autenticación: Los usuarios inician sesión para acceder al juego.
+2. Inversiones y Pagos
+API de Pagos: Integra un servicio como Stripe o PayPal para manejar las inversiones de los jugadores. Los jugadores pueden invertir una cantidad mínima (por ejemplo, $5) para participar en una partida.
+Suscripciones: Ofrece diferentes niveles de suscripción (Básica, Premium, VIP) que los jugadores pueden elegir al invertir.
+3. Sistema de Juegos y Recompensas
+Partidas: Maneja la creación y el desarrollo de partidas. Guarda los resultados y distribuye las recompensas según el rendimiento de los jugadores.
+Distribución de Recompensas: Calcula las recompensas basadas en el total recaudado y la comisión. Actualiza el balance de los jugadores.
+4. Retiros de Dinero
+Solicitudes de Retiro: Permite que los jugadores soliciten retiros de sus ganancias. Integra funciones para verificar y procesar estas solicitudes.
+API de Pagos: Utiliza la API de pagos para transferir dinero desde la plataforma a las cuentas de los jugadores.
